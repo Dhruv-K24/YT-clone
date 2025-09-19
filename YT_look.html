@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mozilla+Text:wght@200..700&family=Nata+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mozilla+Text:wght@200..700&family=Nata+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <title>YT lookah</title>
+    <style>
+        body{
+            margin: 0px 0px;
+            padding-top: 85px;
+            padding-left: 80px;
+        }
+        p{
+            display: inline-block;
+        }
+        .vid{
+            height: 150px; width: 270px;
+            object-fit: cover;
+            border: 1.12px solid black;
+        }
+        .S1{
+            display: inline-block;
+            width: 272px;
+            margin: 2px 14px;
+            transition: 0.435s;
+            box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.114);
+        }
+        .S1:hover{
+            background-color: rgba(156, 173, 173, 0.354);
+            width: 272px;
+        }
+        .pic{
+            width: 43px; height: 43px;
+            object-fit: cover;
+            display: inline-block;
+            border-radius: 50%;
+        }
+        .S1:pic::hover{
+            width: 45px; height: 49px;
+        }
+        .stat-vid{
+            display: inline-block;
+            
+            vertical-align: bottom;
+        }
+        .heading{
+            display: block;
+            margin: 2px 4px;
+            
+            font-family: nata sans;
+            display: block;
+        }
+        .channel{
+            margin: 1px 3px;
+            font-size: 13.6px;
+            font-family: mozilla text;
+            text-align: left;
+            color: rgb(128, 130, 130);
+        }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+        .search{
+            display: flex;
+            margin-left: 30px;
+            text-align: center;
+            border-radius: 0cm 0cm;
+            flex: 1;
+            color: rgb(6, 10, 14);
+            border: 1.3px solid rgba(129, 124, 124, 0.779);
+            background-color: rgb(245, 245, 245);
+            text-align: center;
+            border-radius: 0px;
+            height: 24px; 
+            box-shadow: inset 2px 2px 15px rgba(137, 137, 137, 0.089);
+            padding: 6.6px 135px;
+
+        }
+        .search::placeholder{
+            font-size: 18px;
+            border: 2p solid white;
+            
+            padding-left: 15px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .upper{
+            position: fixed;
+            top: 0cm;
+            left: 0cm;
+            margin-top: 0px;
+            display: flex;
+            flex-direction: row;
+            justify-content:space-between;
+            align-items: center;
+            padding-bottom: 0px;
+            box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.116);
+            border-bottom: 2.1px solid rgb(177, 175, 175);
+            background-color: rgba(245, 244, 244, 0.927);
+            height: 70px;
+            width: 100%;
+        }
+        .logo{
+            margin-left: 20px;
+            height:40px;
+            vertical-align:top;
+            margin-right: 10px;
+            
+        }
+        .logoY{
+            height:64px;
+            vertical-align:top;
+            
+        }
+        .logotxt{
+            color: aliceblue;
+            vertical-align:auto;
+            text-align: left;
+        }
+        .left{
+            display: flex;
+            flex: 1;
+            justify-content: left;
+            align-items: center;
+            padding: 5px;
+            
+            
+        }
+        .mid{
+            display: flex;
+            margin-right: 70px;
+            flex: 3;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        .right{
+            padding-left: 38px;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            flex: 1;
+            margin-right: 40px;
+            width: 80px;
+            flex-shrink: 0;
+        }
+        .SS{
+            background-color: rgb(218, 221, 224);
+            border: 1px solid gray;
+            height: 40px; width: 55px;
+        }
+        .SS:hover{
+            background-color: rgb(189, 195, 201);
+        }
+        .Voice{
+            margin-left: 6px;
+            height: 45px; width: 45px;
+            border-radius: 50%;
+            border: 0.1px solid rgb(219, 219, 219);
+        }
+        .Voice2{
+            object-fit: cover;
+            margin-left: 6px;
+            background-color: rgb(238, 241, 243);
+            height: 44px; width: 44px;
+            border-radius: 50%;
+            margin-left: 28px;
+            transition: 0.4s;
+            border: 0.1px solid rgb(219, 219, 219);
+        }
+        .Voice2:hover{
+            background-color:  rgb(202, 205, 207);
+        }
+        .V1{
+            height: 26px;
+        }
+        .V2{
+            height: 30px;
+        }
+        .sea{
+            height: 18px;
+            object-fit: cover;
+        }
+        .list{
+            display: flex;
+    flex-wrap: wrap;
+    max-width: calc(272px * 4 + 14px * 8); 
+        }
+        .pic2{
+            margin-left: 30px;
+            width: 54px; height: 54px;
+            object-fit: cover;
+            border: 0.4px solid grey;
+            display: inline-block;
+            border-radius: 50%;
+        }
+        .Sidebar{
+            position: fixed;
+            display: flex;
+            left: 0cm;
+            width: 80px;
+            color: aquamarine;
+            top: 70px;
+            bottom: 0px;
+            box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.116);
+            border-right: 2.1px solid rgb(177, 175, 175);
+            background-color: rgba(245, 244, 244, 0.927);
+        }
+        .side-icon{
+            width: 40px;
+            margin-bottom: 3px;
+            padding-top: 40px;
+            margin-left: 15px;
+        }
+        .content{
+            display: flex;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="upper">
+    <div class="left">
+        <img src="menu.svg" class="logo">
+        <img src="yt2.png" class="logoY">
+    </div>
+    <div class="mid">
+        <input type="text" class="search" placeholder=" Search videos">
+        <button class="SS"> <img src="sea.png" class="sea"></button></button>
+        <button class="Voice"> <img class="V1" src="voice.svg"></button>
+    </div>
+
+    <div class="right">
+        <button class="Voice2"> <img src="UP.svg" class="V2"></button></button>
+        <button class="Voice2"> <img src="ico.svg" class="V2"></button></button>
+        <button class="Voice2"> <img src="NOTI.png" class="V2"></button></button>
+        <img src="R.png" class="pic2">
+    </div>
+</div>
+<div class="Sidebar">
+<div class="Content">
+    <img class="side-icon" src="home.png">
+    <p style="padding-left:13px; color: rgb(48, 48, 48); font-family: nata sans; margin-top: 3px; margin-bottom: 25px;"> Home</p>
+    <img class="side-icon" src="short.png">
+    <p style="padding-left:13px; color: rgb(48, 48, 48); font-family: nata sans; margin-top: 3px; margin-bottom: 25px;"> Shorts</p>
+    <img class="side-icon" src="sub.png">
+    <p style="padding-left:13px; color: rgb(48, 48, 48); font-family: nata sans; margin-top: 3px; margin-bottom: 25px;"> Subs</p>
+</div>
+</div>
+</div>
+
+    <div class="list">
+
+    <br>
+    <div class="S1">
+    <img src="dio.jpg" class="vid">
+    <img src="c.jpg" class="pic">
+    <div class="stat-vid">
+    <p class="heading">Every Time Stop in JJBA</p>
+    <p class="channel"> Joshua</p>
+    </div>
+    </div>
+
+    <div class="S1">
+    <img src="f.jpg" class="vid">
+    <img src="d.jpg" class="pic">
+    <div class="stat-vid">
+    <p class="heading">Fastest Kryptonian in DC?</p>
+    <p class="channel"> Edgelordxx69</p>
+    </div>
+    </div>
+
+    <div class="S1">
+    <img src="psy.jpg" class="vid">
+    <img src="nuts.jpg" class="pic">
+    <div class="stat-vid">
+    <p class="heading">Can we develop telekinesis?</p>
+    <p class="channel">Tin_hat_man</p>
+    </div>
+    </div>
+
+    <div class="S1">
+    <img src="ac.jpg" class="vid">
+    <img src="kitty2.jpg" class="pic">
+    <div class="stat-vid">
+    <p class="heading">Ritual to summon God.</p>
+    <p class="channel">Ent1ty</p>
+    </div>
+    </div>
+
+    <div class="S1">
+    <img src="w.jpg" class="vid">
+    <img src="pp.jpg" class="pic">
+    <div class="stat-vid">
+    <p class="heading">Can Milo beat Wonder of U?</p>
+    <p class="channel">Powerscaler_24</p>
+    </div>
+    </div>
+
+    <div class="S1">
+    <img src="x.jpg" class="vid">
+    <img src="ben.jpg" class="pic">
+    <div class="stat-vid">
+    <p class="heading">Powerscaling Ben 10.</p>
+    <p class="channel">Ink Tank</p>
+    </div>
+    </div>
+
+    <div class="S1">
+    <img src="vac.jpg" class="vid">
+    <img src="glow.jpg" class="pic">
+    <div class="stat-vid">
+    <p class="heading">Best hotels globally!</p>
+    <p class="channel">Guru-traveller</p>
+    </div>
+    </div>
+
+    <div class="S1">
+    <img src="ab.jpg" class="vid">
+    <img src="nuts.jpg" class="pic">
+    <div class="stat-vid">
+    <p class="heading">Anamolies Iceberg</p>
+    <p class="channel">Tin_hat_man</p>
+    </div>
+    </div>
+
+    <div class="S1">
+    <img src="Codes.jpg" class="vid">
+    <img src="hac.jpg" class="pic">
+    <div class="stat-vid">
+    <p class="heading">Coding Language Tierlist</p>
+    <p class="channel">Heckerman</p>
+    </div>
+    </div>
+
+    <div class="S1">
+    <img src="GER.jpg" class="vid">
+    <img src="sta.jpg" class="pic">
+    <div class="stat-vid">
+    <p class="heading">Why G.E.R is scary</p>
+    <p class="channel">Star reviewer</p>
+    </div>
+    </div>
+
+    <div class="S1">
+    <img src="SK.jpg" class="vid">
+    <img src="an.jpg" class="pic">
+    <div class="stat-vid">
+    <p class="heading">Saiki K is Pure gold</p>
+    <p class="channel">Anime clipper</p>
+    </div>
+    </div>
+
+    <div class="S1">
+    <img src="goo.jpg" class="vid">
+    <img src="gay.jpg" class="pic">
+    <div class="stat-vid">
+    <p class="heading">Untitled Goose game</p>
+    <p class="channel">Man of games</p>
+    </div>
+    </div>
+
+
+
+    </div>
+</body>
+</html>
